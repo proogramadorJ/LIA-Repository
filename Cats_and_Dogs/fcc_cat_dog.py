@@ -112,9 +112,11 @@ plotImages(augmented_images)
 # 7
 model = Sequential()
 # Convolutions
-model.add(Conv2D(6,kernel_size=(3,3),input_shape=(IMG_HEIGHT,IMG_WIDTH,3), activation = 'relu'))
+model.add(Conv2D(8,kernel_size=(3,3),input_shape=(IMG_HEIGHT,IMG_WIDTH,3), activation = 'relu'))
 model.add(MaxPool2D())
 model.add(Conv2D(16, kernel_size=(3,3), activation = 'relu'))
+model.add(MaxPool2D())
+model.add(Conv2D(32, kernel_size=(3,3), activation = 'relu'))
 model.add(MaxPool2D())
 
 # Dense layers
